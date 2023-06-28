@@ -12,7 +12,6 @@ export default function Main() {
     function randomGen() {
         let dicesArr = []
         for (let i = 0; i < 10; i++) {
-            // dice.push(Math.ceil(Math.random() * 6))
             dicesArr.push({
                 ...randomDice(),
                 id: i
@@ -41,15 +40,12 @@ export default function Main() {
             } else {
                 setCounter(prev => prev + 1)
                 return prev.map(d => {
-                    // return d.held == true ? d : { ...randomDice(), id: d.id }
                     return d.held == true ? d : { ...randomDice(), id: d.id }
                 })
             }
         });
-        // console.log('rolled')
     }
 
-    // console.log(dices)
     function holdDice(id) {
         setDices(prev => prev.map(d =>
             d.id === id ? { ...d, held: !d.held } : d))
@@ -68,7 +64,7 @@ export default function Main() {
 
     React.useEffect(() => {
         window.onresize = () => handleResize();
-        console.log('resized')
+        // console.log('resized')
     }, [size])
     return (
         <div className='main--div'>
