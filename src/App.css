@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.dice {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 5px 0.25rem rgb(112, 112, 112));
+}
+
+
+.main--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(stratos.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.main--div {
+  width: 60%;
+  padding: 25px;
+  background: #0B2434;
+  margin-block: 30px;
+}
+
+.tenzies {
+  border-radius: 10px;
+  background: #F5F5F5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+.tenzies>h1 {
+  font-size: 45px;
+}
+
+.tenzies p {
+  font-size: 25px;
+  color: #4A4E74;
+  margin-bottom: 25px;
+}
+
+.diceElements {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 25px;
+}
+
+.tenzies button {
+  width: 180px;
+  height: 50px;
+  background-color: #5035FF;
+  font-size: 22px;
+  font-family: 'Inter', sans-serif;
+  border-style: none;
+  color: white;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 0.25rem rgb(17, 0, 45));
+}
+
+.tenzies button:active {
+  transform: scale(.99);
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.counter b {
+  font-size: 25px;
+  color: rgb(6, 0, 77);
+}
+
+
+@media (max-width:1150px) {
+  .tenzies {
+    padding-inline: 30px;
+  }
+
+  .tenzies h1 {
+    font-size: 38px;
+  }
+
+  .tenzies p {
+    font-size: 19px;
+  }
+
+  .dice {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tenzies button {
+    font-size: 20px;
+    width: 150px;
+  }
+}
+
+@media (max-width:910px) {
+  .tenzies {
+    padding-inline: 20px;
+  }
+
+  .main--div {
+    width: 75%;
+  }
+
+  .tenzies h1 {
+    font-size: 34px;
+  }
+
+  .tenzies p {
+    font-size: 17px;
+  }
+
+  .dice {
+    width: 55px;
+    height: 55px;
+  }
+
+  .tenzies button {
+    font-size: 20px;
+    width: 130px;
+    height: 45px;
+  }
+
+  .counter b {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:650px) {
+  .tenzies {
+    padding-inline: 15px;
+  }
+
+  .main--div {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .tenzies h1 {
+    font-size: 30px;
+  }
+
+  .tenzies p {
+    font-size: 14px;
+  }
+
+  .tenzies .dice {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .tenzies button {
+    font-size: 18px;
+    width: 120px;
+    height: 40px;
+  }
+
+  .counter {
+    font-size: 13px;
+  }
+
+  .counter b {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:450px) {
+  .tenzies {
+    padding-inline: 10px;
+  }
+
+  .main--div {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .tenzies h1 {
+    font-size: 28px;
+  }
+
+  .tenzies p {
+    font-size: 13px;
+  }
+
+  .tenzies .dice {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .diceElements {
+    gap: 15px;
+  }
+
+  .tenzies button {
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+  }
+
+  .counter {
+    font-size: 11px;
+  }
+
+  .counter b {
+    font-size: 16px;
+  }
+}
